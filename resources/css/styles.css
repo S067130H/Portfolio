@@ -1,0 +1,229 @@
+/* Fonts */
+
+@font-face {
+	font-family: "Comfortaa";
+	font-style: normal;
+	src: url("../fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf");
+}
+
+@font-face {
+	font-family: "Noto Sans";
+	font-style: normal;
+	src: url("../fonts/Noto_Sans/NotoSans-VariableFont_wdth\,wght.ttf");
+}
+
+@font-face {
+	font-family: "Noto Sans Italic";
+	font-style: italic;
+	src: url("../fonts/Noto_Sans/NotoSans-Italic-VariableFont_wdth\,wght.ttf");
+}
+
+@font-face {
+	font-family: "Noto Serif";
+	font-style: normal;
+	src: url("../fonts/Noto_Serif/NotoSerif-VariableFont_wdth\,wght.ttf");
+}
+
+@font-face {
+	font-family: "Noto Serif Italic";
+	font-style: italic;
+	src: url("../fonts/Noto_Serif/NotoSerif-Italic-VariableFont_wdth\,wght.ttf");
+}
+
+/* Utilities */
+
+.comfortaa {
+	font-family: "Comfortaa";
+}
+
+.noto-sans {
+	font-family: "Noto Sans";
+}
+
+.noto-sans-italic {
+	font-family: "Noto Sans Italic";
+}
+
+.noto-serif {
+	font-family: "Noto Serif";
+}
+
+.noto-serif-italic {
+	font-family: "Noto Serif Italic";
+}
+
+.fade-slide-in {
+    animation: fade-slide-in 0.5s ease forwards;
+}
+
+.fade-slide-out {
+    animation: fade-slide-out 0.5s ease forwards;
+}
+
+/* Animations */
+
+@keyframes expand {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		filter: blur(1rem);
+		opacity: 0;
+	}
+	100% {
+		filter: blur(0);
+		opacity: 1;
+	}
+}
+
+@keyframes fade-slide-in {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-slide-out {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+}
+
+@keyframes slide-up {
+	0% {
+		transform: translateY(3rem);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes slide-down {
+	0% {
+		transform: translateY(-3rem);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+/* Reset */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Navigation */
+
+#navigation {
+	color: hsl(0, 0%, 100%);
+	position: fixed;
+	right: 0;
+	top: 0;
+}
+
+#navigation nav {
+	margin: 1rem;
+	padding: 1rem;
+	position: relative;
+}
+
+#navigation i {
+	position: absolute;
+	right: 0;
+	transition: all 0.3s;
+}
+
+#navigation i:hover {
+	transform: scale(1.25);
+}
+
+#navigation menu {
+    display: none;
+	font-size: 1.25rem;
+	list-style: none;
+	position: absolute;
+	right: 0;
+	text-align: right;
+	top: 3rem;
+	width: max-content;
+}
+
+#navigation li:not(:last-child) {
+	margin-bottom: 1rem;
+}
+
+/* Hero */
+
+#hero {
+	align-items: center;
+	background-blend-mode: color;
+	background-color: hsla(215, 100%, 15%, 0.5);
+	background-image: url("../images/blue-white-background-with-white-swirl-center.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	height: 100vh;
+	justify-content: center;
+	text-align: center;
+}
+
+#hero hgroup {
+	color: hsl(0, 0%, 100%);
+	letter-spacing: 0.25rem;
+}
+
+#hero h1 {
+	animation: fade-in 1.5s ease 1s 1 normal forwards,
+		slide-down 1.5s ease 1s 1 normal forwards;
+	font-size: 5rem;
+	font-weight: 300;
+	opacity: 0;
+}
+
+#hero hr {
+	animation: expand 1.5s ease 1 normal forwards;
+	border-radius: 50%;
+	color: white;
+	margin: 0 auto;
+	width: 0;
+}
+
+#hero p {
+	animation: fade-in 1.5s ease 1s 1 normal forwards,
+		slide-up 1.5s ease 1s 1 normal forwards;
+	font-size: 3rem;
+	font-weight: 300;
+	opacity: 0;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 560px) {
+    #hero h1 {
+        font-size: 3rem;
+    }
+
+    #hero p {
+        font-size: 1.5rem;
+    }
+}
