@@ -85,22 +85,22 @@
 @keyframes fade-slide-in {
     0% {
         opacity: 0;
-        transform: translateY(3rem);
+        transform: translateX(5rem);
     }
     100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0);
     }
 }
 
 @keyframes fade-slide-out {
     0% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0);
     }
     100% {
         opacity: 0;
-        transform: translateY(3rem);
+        transform: translateX(5rem);
     }
 }
 
@@ -140,7 +140,7 @@
 }
 
 #navigation nav {
-	margin: 1rem;
+	margin: 2rem;
 	padding: 1rem;
 	position: relative;
 }
@@ -211,19 +211,20 @@
 #hero p {
 	animation: fade-in 1.5s ease 1s 1 normal forwards,
 		slide-up 1.5s ease 1s 1 normal forwards;
-	font-size: 2.5rem;
+	font-size: 2rem;
 	font-weight: 300;
 	opacity: 0;
+    text-transform: uppercase;
 }
 
 /* Media Queries */
 
 @media screen and (max-width: 560px) {
     #hero h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     #hero p {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 }
